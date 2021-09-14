@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg navbar-dark backgound align-items-center">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+      aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+      <ul class="navbar-nav mr-auto d-flex align-items-center">
+  
+        <li>
+          <img src="assets/IMG/LogoAzul.png" alt="imagem do user" width="150px" height="150px" class="img-fluid grow">
+        </li>
+  
+        <li class="nav-item-active align-items-center">
+          <button type="button" class="btn" data-toggle="tooltip" data-placement="bottom" title="Início">
+            <a class="nav-link font-weight-bold text-body threed fontM" href="#">HOME <span class="sr-only"></span></a>
+          </button>
+         
+        </li>
+        <li class="nav-item align-items-center" *ngIf='auth.logado()'>
+          <button type="button" class="btn" data-toggle="tooltip" data-placement="bottom" title="Linha do Tempo">
+            
+            
+          <a class="nav-link font-weight-normal text-body threed fontP" routerLink="/timeline" href="#">TIMELINE</a>
+        </button>
+        </li> 
+
+        <li class="nav-item align-items-center" *ngIf='auth.logado()'>
+          <button type="button" class="btn" data-toggle="tooltip" data-placement="bottom" title="Categoria">
+            
+          <a class="nav-link font-weight-normal text-body threed fontP" routerLink="/categoria" href="#">CATEGORIA</a>
+        </button>
+        </li>
+  
+        <li class="nav-item align-items-center">
+          <button type="button" class="btn" data-toggle="tooltip" data-placement="bottom" title="Nossos contatos">
+          <a class="nav-link font-weight-normal text-body threed fontP" routerLink='/contatos' href="#">CONTATOS</a>
+        </button>
+        </li>
+  
+        <li class="nav-item dropdown">
+          <button type="button" class="btn" data-toggle="tooltip" data-placement="bottom" title="Click e veja mais">
+          <a class="nav-link dropdown-toggle font-weight-bold text-body threed fontP" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            LOGIN
+          </a>
+       
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown" *ngIf='!auth.logado()'>
+            <a class="dropdown-item" routerLink="/login" href="#">ENTRE</a>
+            <a class="dropdown-item"  routerLink='/cadastro' href="#">CADASTRE-SE</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" routerLink='/atualizar' href="#">ATUALIZE-SE</a>
+          </div>
+        </button>
+        </li>
+  
+  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" *ngIf='!auth.logado()'>
+            <button class="btn btn-info my-2 my-sm-0 " routerLink='/login' href='#' type="submit">Entrar</button>
+    </form>
+
+    
+  </div>
+  </nav>

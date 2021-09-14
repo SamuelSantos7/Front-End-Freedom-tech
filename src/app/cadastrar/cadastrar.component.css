@@ -1,0 +1,24 @@
+#img-bg{
+  background-image: url(../../assets/IMG/note.gif);
+
+  min-height: 1130px;
+display:flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.mxr-7{
+  margin-right: 3px;
+}
+.container-fluid {
+background-color:rgb(48, 82, 82);;
+
+}
+
+
+
+
+
+

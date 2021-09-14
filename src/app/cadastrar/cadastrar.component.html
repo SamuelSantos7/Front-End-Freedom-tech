@@ -1,0 +1,96 @@
+<div class="container-fluid">
+  <div class="row d-flex align-items-center">
+    <div class="col-md-5" id="img-bg"></div>
+    <div class="col-md-7">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-8">
+          <br>
+          <br>
+          <h1 class="text-center text-white mb-3 ">Cadastro de usuario</h1> 
+        
+<br>
+<br>
+          <div class="form-group text-white">
+            <label for="tipo">Tipo de Usuário</label>
+            <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
+              <option>Selecione um tipo de usuário</option>
+              <option value="EMPRESA">Colaborador</option>
+              <option value="PESSOA">Estudante</option>
+
+            </select>
+          </div>
+
+          <div class="form-group text-white">
+            <label for="nome">Nome</label>
+            <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome"
+              placeholder="Digite seu nome">
+          </div>
+
+          <div class="form-group text-white">
+            <label for="email">Email</label>
+            <input [(ngModel)]='user.email' class="form-control" type="text" name="email" id="email"
+              placeholder="Digite seu email">
+          </div>
+
+          <div class="form-group text-white">
+            <label for="login">Login</label>
+            <input [(ngModel)]='user.login' class="form-control" type="text" name="login" id="login"
+              placeholder="Digite seu usuário">
+          </div>
+
+          <div class="form-group text-white">
+            <label for="foto">Link da foto de perfil</label>
+            <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto"
+              placeholder="Link da sua foto">
+          </div>
+
+          <div class="form-group text-white">
+            <label for="cpf">CPF ou CNPJ</label>
+            <input [(ngModel)]='user.cpf' class="form-control" type="text" name="cpf" id="cpf" placeholder="seu CPF ou CNPJ">
+          </div>
+
+
+
+          <div class="form-group text-white">
+            <label for="Linkedin">Link do Linkedin</label>
+            <input [(ngModel)]='user.Linkedin' [(ngModel)]='user.senha' class="form-control" type="text" name="Linkedin" id="Linkedin"
+              placeholder="Digite seu linkedin">
+          </div>
+
+          <div class="form-group text-white">
+            <label for="senha">Senha</label>
+            <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
+              placeholder="Digite sua senha">
+          </div>
+
+          <div class="form-group text-white">
+            <label for="confirmSenha">Confirmar Senha</label>
+            <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha"
+              placeholder="Confirme sua senha">
+          </div>
+
+
+
+          <br>
+
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-dark mxr-7" routerLink='/inicio'>Cancelar
+            </button>
+            <button type="submit" class="btn btn-dark" routerLink="/timeline" (click)='cadastrar()'>Cadastrar</button>
+          </div>
+
+
+          <hr class="mt-5 mb-5">
+
+          <p class="text-center text-white">Já tem uma conta?<a routerLink='/login'> Entrar</a>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+</div>

@@ -1,0 +1,16 @@
+.fontsiz {
+    font-size: 20px;
+}
+
+.bg-back {
+    background-image: url(../../assets/IMG/Pessoamexendonopcverde.jpg);
+}
+
+.bg-teste {
+    background-image: url(../../assets/IMG/fundo/14.png);
+}
+
+.opaque
+{
+   opacity: 0.5;
+}
